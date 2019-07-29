@@ -13,7 +13,10 @@ public class App
 {
     public static void main( String[] args ) {
         AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext(config.class);
-       Movie movie=annotationConfigApplicationContext.getBean("movie",Movie.class);
+
+        Movie movie = annotationConfigApplicationContext.getBean("movie", Movie.class);
+        Actor actor = annotationConfigApplicationContext.getBean("actor", Actor.class);
         System.out.println(movie);
+        System.out.println(actor);
     }
 }
