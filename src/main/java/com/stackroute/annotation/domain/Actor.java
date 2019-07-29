@@ -14,7 +14,7 @@ public class Actor  {
     @Value("Male")
     private String gender;
 
-
+@Autowired
     public Actor(int age, String name, String gender) {
 
         this.age = age;
