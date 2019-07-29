@@ -8,27 +8,35 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = "com.stackroute.annotation")
 public class config {
     @Bean
-    public Movie movie1()
-    {
-        Movie movie1=new Movie();
+    public Movie movie1() {
+        Movie movie1 = new Movie();
         movie1.setActor(actor());
         return new Movie();
     }
 
     @Bean
-    public Movie movie()
-    {
-        Movie movie=new Movie();
+    public Movie movie() {
+        Movie movie = new Movie();
         movie.setActor(actor());
         return new Movie();
     }
 
     @Bean
-    public Actor actor()
-    {
-        Actor actor=new Actor();
+    public Actor actor() {
+        Actor actor = new Actor();
 
         return new Actor();
     }
+
+    @Bean(name = "lifeCycleBean")
+    public BeanLifecycleDemoBean lifecycleBean() {
+        BeanLifecycleDemoBean bean = new BeanLifecycleDemoBean();
+        return bean;
+    }
+//    @Bean
+//    public BeanLifecycleDemoBean beanLifecycleDemoBean(){
+//        BeanLifecycleDemoBean beanLifecycleDemoBean=new BeanLifecycleDemoBean();
+//        return beanLifecycleDemoBean();
+//    }
 }
 

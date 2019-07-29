@@ -18,5 +18,7 @@ public class App
         Actor actor = annotationConfigApplicationContext.getBean("actor", Actor.class);
         System.out.println(movie);
         System.out.println(actor);
+
+        annotationConfigApplicationContext.close();
     }
 }
